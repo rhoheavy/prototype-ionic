@@ -4,8 +4,37 @@ import { HomePage } from './home.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'tabs',
     component: HomePage,
+    children: [
+      {
+        path: 'start',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../pages/start/start.module').then(m => m.StartPageModule)
+          }
+        ]
+      },
+      {
+        path: 'services',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../pages/services/services.module').then(m => m.ServicesPageModule)
+          }
+        ]
+      },
+      {
+        path: 'payment',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../pages/payment/payment.module').then(m => m.PaymentPageModule)
+          }
+        ]
+      }
+    ]
   }
 ];
 
