@@ -33,8 +33,18 @@ const routes: Routes = [
             loadChildren: () => import('../pages/payment/payment.module').then(m => m.PaymentPageModule)
           }
         ]
+      },
+      {
+        path: '',
+        redirectTo: '/tabs/start',
+        pathMatch: 'full'
       }
     ]
+  },
+  {
+    path: '',
+    redirectTo: '/tabs/start',
+    pathMatch: 'full'
   }
 ];
 
