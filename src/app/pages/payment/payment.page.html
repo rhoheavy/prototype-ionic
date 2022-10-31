@@ -1,9 +1,44 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Pagos</ion-title>
+    <ion-title>Solicitar Servicio</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <form id="form">
+    <h4>Ubicación</h4>
+    <app-input placeholder="Domicilio"></app-input>
+    <app-input placeholder="Colonia"></app-input>
+    <app-input placeholder="Codigo Postal"></app-input>
+    <app-input placeholder="Servicio"></app-input>
+    <ion-datetime-button datetime="datetime"></ion-datetime-button>
+    <ion-modal [keepContentsMounted]="true">
+      <ng-template>
+        <ion-datetime id="datetime"></ion-datetime>
+      </ng-template>
+    </ion-modal>
+
+    <div>
+      <h4>Recoge:</h4>
+      <ion-item>
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label>Sábanas</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label>Calzado</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label>Traje</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label>Ropa</ion-label>
+      </ion-item>
+    </div>
+    <ion-button expand="block" shape="round">Enviar solicitud</ion-button>
+  </form>
+
 
 </ion-content>
