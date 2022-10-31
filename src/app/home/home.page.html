@@ -1,20 +1,30 @@
-<ion-tabs>
-  <ion-tab-bar slot="bottom">
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
-    <ion-tab-button tab="start">
-      <ion-icon name="home-outline"></ion-icon>
-      <ion-label>Inicio</ion-label>
-    </ion-tab-button>
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom" color="primary">
 
-    <ion-tab-button tab="services">
-      <ion-icon name="water-outline"></ion-icon>
-      <ion-label>Servicios</ion-label>
-    </ion-tab-button>
+      <ion-tab-button tab="start">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Inicio</ion-label>
+      </ion-tab-button>
 
-    <ion-tab-button tab="payment">
-      <ion-icon name="card-outline"></ion-icon>
-      <ion-label>Solicitar</ion-label>
-    </ion-tab-button>
+      <ion-tab-button tab="services">
+        <ion-icon name="water-outline"></ion-icon>
+        <ion-label>Servicios</ion-label>
+      </ion-tab-button>
 
-  </ion-tab-bar>
-</ion-tabs>
+      <ion-tab-button tab="payment">
+        <ion-icon name="card-outline"></ion-icon>
+        <ion-label>Solicitar</ion-label>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>
