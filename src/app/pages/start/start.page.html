@@ -1,16 +1,7 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Inicio</ion-title>
-
-    <ion-buttons slot="end">
-      <ion-button color="primary" routerLink="/login">
-        Login
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
+<ion-header class="ion-no-border">
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
   <div>
     <img src="assets/img/woman.svg" alt=""><br>
     <h3>Bienvenido!</h3>
@@ -19,11 +10,8 @@
       solo disfruta de tu tiempo. </p>
   </div>
 
-
-  <ion-button id="sbms-button" shape="round">
-    Saber Más
+  <ion-button id="sbms-button" shape="round" routerLink="/login">
+    Login
   </ion-button>
-
-
 
 </ion-content>
